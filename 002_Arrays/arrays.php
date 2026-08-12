@@ -49,22 +49,31 @@ echo "hoy me apetece ver: $pelis[$aleatorio]"
 
 $peliculas =[
 //   Título de la película      Director            Año   Ruta a Poster 
-    ["titulo"=> "El Imperio contraataca",  "Director"=>"Irvin Kesner",     "anio"=>1980, "poster"=>"empirestrikesback.jpg"],
-    ["titulo"=> "Origen"                ,  "Director"=>"Christoper Nolan", "anio"=>2011, "poster"=>"inception.jpg" ],
-    ["titulo"=> "Parque Jurásico",         "Director"=>"Steven Spielberg", "anio"=>1992, "poster"=>"jurasicpark.jpg"],
-    ["titulo"=> "Regreso al Futuro",       "Director"=>"Robert Zemedkins", "anio"=>1982, "poster"=>"backtothefuture.jpg"],
-    ["titulo"=> "La última cruzada",       "Director"=>"Steven Spielberg", "anio"=>1988, "poster"=>"indiana.jpg"]
+    ["titulo"=> "El Imperio contraataca",  "director"=>"Irvin Kesner",     "anio"=>1980, "poster"=>"empirestrikesback.jpg"],
+    ["titulo"=> "Origen"                ,  "director"=>"Christoper Nolan", "anio"=>2011, "poster"=>"inception.jpg" ],
+    ["titulo"=> "Parque Jurásico",         "director"=>"Steven Spielberg", "anio"=>1992, "poster"=>"jurasicpark.jpg"],
+    ["titulo"=> "Regreso al Futuro",       "director"=>"Robert Zemedkins", "anio"=>1982, "poster"=>"backtothefuture.jpg"],
+    ["titulo"=> "La última cruzada",       "director"=>"Steven Spielberg", "anio"=>1988, "poster"=>"indiana.jpg"]
 ];
 
 // vamos a desplegar el array:
 foreach ($peliculas as $pelicula) {
     echo "<li>";
     echo "<h2>$pelicula['titulo']</h2>";
-    echo "<p>$pelicula['director']</p>";
-    echo "<p>$pelicula['anio']</p>";
+    echo "<p>Dirigido por: $pelicula['director']</p>";
+    echo "<p>Año: $pelicula['anio']</p>";
     echo "<img src="$pelicula['poster']" alt="$pelicula['titulo']"</p>";
     echo "</li>";
-    
+}
+
+// Otra manera de hacerlo:
+foreach ($peliculas as [$titulo, $director, $anio, $poster]) {
+    echo "<li>";
+    echo "<h2>$titulo</h2>";
+    echo "<p>Dirigido por: $director</p>";
+    echo "<p>Año: $anio/p>";
+    echo "<img src="$poster" alt="$titulo"</p>";
+    echo "</li>";
 }
 
 ?>
