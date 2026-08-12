@@ -55,6 +55,7 @@ echo "hoy me apetece ver: $pelis[$aleatorio]";
 
 # Array Multidimensional
 // Es un array dentro de un array permitiendo bolcar más datos. En cierto modo funciona como una cuadrícula de datos de excel
+// 🍿 Peliculas
 
 $peliculas =[
 //  0.Título                    1.Autor / director  2.Año   3.Ruta a Imagen 
@@ -128,15 +129,10 @@ hacerpizza("normal", "Jamon Serrano", "Rúcula", "Parmesano"); // Pizza Italiana
 
 ########## DATOS 
 // Varios arrays con los datos con los que vamos a trabajar
-$peliculas =[
-//  0.Título                    1.Autor / director  2.Año   3.Ruta a Imagen 
-    ["El Imperio contraataca",  "Irvin Kesner",     1980,   "empirestrikesback.jpg"],
-    ["Origen"                ,  "Christoper Nolan", 2011,   "inception.jpg" ],
-    ["Parque Jurásico",         "Steven Spielberg", 1992,   "jurasicpark.jpg"],
-    ["Regreso al Futuro",       "Robert Zemedkins", 1982,   "backtothefuture.jpg"],
-    ["La última cruzada",       "Steven Spielberg", 1988,   "indiana.jpg"]
-];
 
+// 🍿 Peliculas: recordemos que hay un array $peliculas más arriba
+
+// 🎸 Música:
 $musica = [
 //  0.Título / obra              1.Autor / artista           2.Año   3.Ruta a Imagen
     ["Thriller",                 "Michael Jackson",          1982,   "thriller.jpg"],
@@ -151,6 +147,7 @@ $musica = [
     ["Parachutes",               "Coldplay",                 2000,   "parachutes.jpg"]
 ];
 
+// 📕 Libros:
 $libros = [
 //  0.Título                    1.Autor                    2.Año   3.Ruta a Imagen
     ["El nombre de la rosa",    "Umberto Eco",              1980,   "elnombredelarosa.jpg"],
@@ -165,6 +162,7 @@ $libros = [
     ["El código Da Vinci",      "Dan Brown",                2003,   "elcodigodavinci.jpg"]
 ];
 
+//🎮 Videojuegos:
 $videojuegos = [
 //  0.Título                    1.Creador / compañía       2.Año   3.Ruta a Imagen
     ["Super Mario Bros.",       "Nintendo",                 1985,   "supermariobros.jpg"],
@@ -179,8 +177,6 @@ $videojuegos = [
     ["Half-Life",               "Valve",                    1998,   "halflife.jpg"]
 
 ];
-
-
 
 
 
@@ -203,7 +199,6 @@ function desplegar($array, $ambito){
     }
     echo '</ul>';
 }
-
 
 
 
