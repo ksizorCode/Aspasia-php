@@ -7,7 +7,7 @@
 //  - mampp
 //  - https://www.cdmon.com/es/hosting/plataforma-pruebas
 
-# VARIABLES
+# VARIABLES - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 // Ejemplo 001
 
@@ -15,12 +15,12 @@ $nombre = "Miguel";
 $ciudad = "Gijón";
 $nacimiento = 1983;
 
-$actualYear = date('Y');
-$edad= $actualYear - $nacimiento;
+$actualYear = date('Y'); // esto almacena el año actual
+$edad= $actualYear - $nacimiento; // calcula años desde año actual
 
 echo "Hola, mi nombre es $nombre y soy de $ciudad y tengo $edad años.";
 
-// - - - - - - - - - - - - - - - - - - - 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 # ARRAYS
 // Array unidimensional
