@@ -1,6 +1,6 @@
 <?php
 
-// VARIABLES
+# VARIABLES
 
 // Ejemplo 001
 
@@ -13,8 +13,9 @@ $edad= $actualYear - $nacimiento
 
 echo "Hola, mi nombre es $nombre y soy de $ciudad y tengo $edad años.";
 
+// - - - - - - - - - - - - - - - - - - - 
 
-// ARRAYS
+# ARRAYS
 // Array unidimensional
 
 $pelis =[
@@ -33,8 +34,9 @@ for($i=0; $i<count($pelis); $i++){
 }
 echo "</ul>";
 
+// - - - - - - - - - - - - - - - - - - - 
 
-// Ejemplo con Aleatorio
+# Ejemplo con Aleatorio
 
 $cantidadPelis = count($pelis); // muestra la cantidad de elementos que tiene el array peliculas
 $aleatorio = rand(1,$cantidadPelis); // devuelve un valor aleatorio entre 1 y cantidad total de peliculas
@@ -42,7 +44,7 @@ $aleatorio = rand(1,$cantidadPelis); // devuelve un valor aleatorio entre 1 y ca
 echo "hoy me apetece ver: $pelis[$aleatorio]"
 
 
-
+// - - - - - - - - - - - - - - - - - - - 
 
 # Array Multidimensional
 // Es un array dentro de un array permitiendo bolcar más datos. En cierto modo funciona como una cuadrícula de datos de excel
