@@ -86,8 +86,39 @@ foreach ($peliculas as [$titulo, $autor, $anio, $imagen]) {
 }
 
 
-# Funciones
-// podemos empaquetar instrucciones para reutilizarlas:
+# Funciones()
+// las funciones son estructuras de código reutilizables.
+// los parametros son valores con los que vamos a trabajar en el proceso
+
+/*
+Instrucciones de cómo hacer la pizza
+Esta función espera que le pasemos como parámetro:
+1. $base  -  tipo de base de la pizza
+2. $ing01 -  ingrediente 01 de la pizza
+3. $ing02 -  ingrediente 02 de la pizza
+4. $ing03 -  ingrediente 03 de la pizza
+
+*/
+function hacerpizza($base,$ing01, $ing02, $ing03, $nombrePizza ){
+    echo "<h2>".$nombrePizza."</h2";
+    echo "🌱Orégano"."\n";
+    echo $ing03."\n";
+    echo $ing02."\n";
+    echo $ing01."\n";
+    echo "🧀 motzarella"."\n";
+    echo "🥫 salsa tomate"."\n";
+    echo "🍕".$base."\n";
+    echo "-----------"."\n"."\n"."\n";
+}
+
+
+hacerpizza("normal", "Pepperoni", "Queso", "Aceitunas"); // Pizza Pepperoni
+hacerpizza("integral", "Pollo", "Champiñones", "Queso"); // Pizza Campestre
+hacerpizza("normal", "Atún", "Cebolla", "Aceitunas"); // Pizza Marinera
+hacerpizza("barbacoa", "Pollo", "Bacon", "Cebolla"); // Pizza Barbacoa
+hacerpizza("integral", "Tomate", "Mozzarella", "Albahaca"); // Pizza Margarita
+hacerpizza("integral", "Espinacas", "Champiñones", "Queso"); // Pizza Vegetal
+hacerpizza("normal", "Jamon Serrano", "Rúcula", "Parmesano"); // Pizza Italiana
 
 function desplegar($array){
     echo '<ul class="lista">'
