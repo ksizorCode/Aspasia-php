@@ -44,13 +44,27 @@ echo "hoy me apetece ver: $pelis[$aleatorio]"
 
 
 
-// Array Multidimensional
+# Array Multidimensional
 // Es un array dentro de un array permitiendo bolcar más datos. En cierto modo funciona como una cuadrícula de datos de excel
+
 $peliculas =[
-    ["El Imperio contraataca"],
-    ["Inception"],
-    ["Parque Jurásico"],
-    ["Regreso al Futuro"],
-    ["Indiana Jones y la última cruzada]"
+//   Título de la película      Director            Año   Ruta a Poster 
+    ["titulo"=> "El Imperio contraataca",  "Director"=>"Irvin Kesner",     "anio"=>1980, "poster"=>"empirestrikesback.jpg"],
+    ["titulo"=> "Origen"                ,  "Director"=>"Christoper Nolan", "anio"=>2011, "poster"=>"inception.jpg" ],
+    ["titulo"=> "Parque Jurásico",         "Director"=>"Steven Spielberg", "anio"=>1992, "poster"=>"jurasicpark.jpg"],
+    ["titulo"=> "Regreso al Futuro",       "Director"=>"Robert Zemedkins", "anio"=>1982, "poster"=>"backtothefuture.jpg"],
+    ["titulo"=> "La última cruzada",       "Director"=>"Steven Spielberg", "anio"=>1988, "poster"=>"indiana.jpg"]
 ];
+
+// vamos a desplegar el array:
+foreach ($peliculas as $pelicula) {
+    echo "<li>";
+    echo "<h2>$pelicula['titulo']</h2>";
+    echo "<p>$pelicula['director']</p>";
+    echo "<p>$pelicula['anio']</p>";
+    echo "<img src="$pelicula['poster']" alt="$pelicula['titulo']"</p>";
+    echo "</li>";
+    
+}
+
 ?>
