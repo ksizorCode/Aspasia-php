@@ -1,5 +1,12 @@
 <?php
 
+// puedes teastear todo esto en: https://www.mycompiler.io/es/new/php
+// ó instalar un servidor local:
+//  - localwp
+//  - xampp
+//  - mampp
+//  - https://www.cdmon.com/es/hosting/plataforma-pruebas
+
 # VARIABLES
 
 // Ejemplo 001
