@@ -1,0 +1,518 @@
+/* =========================================================
+   PIZZERÍA MANOLO
+   Diseño responsive - estilo italiano moderno
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   1. VARIABLES
+   --------------------------------------------------------- */
+
+:root {
+    --rojo: #c62828;
+    --rojo-oscuro: #8e1b1b;
+    --verde: #386641;
+    --crema: #fff8e7;
+    --crema-oscuro: #f3e6c8;
+    --blanco: #ffffff;
+    --texto: #29251f;
+    --gris: #706b63;
+
+    --sombra: 0 12px 30px rgba(0, 0, 0, .10);
+    --sombra-hover: 0 20px 40px rgba(0, 0, 0, .18);
+
+    --radio: 18px;
+}
+
+
+/* ---------------------------------------------------------
+   2. RESET
+   --------------------------------------------------------- */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(198, 40, 40, .06),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(56, 102, 65, .06),
+            transparent 30%
+        ),
+        var(--crema);
+
+    color: var(--texto);
+
+    font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    line-height: 1.6;
+}
+
+
+/* ---------------------------------------------------------
+   3. CONTENEDOR PRINCIPAL
+   --------------------------------------------------------- */
+
+main {
+    width: min(1200px, calc(100% - 40px));
+    margin: 60px auto 80px;
+}
+
+
+/* ---------------------------------------------------------
+   4. CABECERA
+   --------------------------------------------------------- */
+
+main > h1 {
+    margin: 0;
+
+    text-align: center;
+
+    color: var(--rojo-oscuro);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(2.5rem, 6vw, 5rem);
+
+    line-height: 1;
+
+    letter-spacing: -2px;
+
+    text-shadow:
+        2px 2px 0 rgba(198, 40, 40, .08);
+}
+
+
+/* Decoración debajo del título */
+
+main > h1::after {
+    content: "🍕";
+
+    display: block;
+
+    margin: 18px auto 10px;
+
+    font-size: 2rem;
+
+    letter-spacing: 0;
+}
+
+
+/* ---------------------------------------------------------
+   5. SUBTÍTULO
+   --------------------------------------------------------- */
+
+main > h2 {
+    max-width: 700px;
+
+    margin: 0 auto 25px;
+
+    text-align: center;
+
+    color: var(--verde);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+
+    font-weight: 400;
+}
+
+
+/* ---------------------------------------------------------
+   6. DESCRIPCIÓN
+   --------------------------------------------------------- */
+
+main > p {
+    max-width: 850px;
+
+    margin: 30px auto 50px;
+
+    padding: 25px 30px;
+
+    background: rgba(255, 255, 255, .65);
+
+    border-left: 5px solid var(--rojo);
+
+    border-radius: 0 var(--radio) var(--radio) 0;
+
+    color: var(--gris);
+
+    font-size: 1rem;
+
+    box-shadow: var(--sombra);
+
+    backdrop-filter: blur(8px);
+}
+
+
+/* ---------------------------------------------------------
+   7. LISTA DE PIZZAS
+   --------------------------------------------------------- */
+
+.lista-pizzas {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 25px;
+
+    margin: 0;
+
+    padding: 0;
+
+    list-style: none;
+}
+
+
+/* ---------------------------------------------------------
+   8. TARJETA
+   --------------------------------------------------------- */
+
+.lista-pizzas li {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    min-height: 250px;
+
+    padding: 25px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #fffaf0
+        );
+
+    border: 1px solid rgba(142, 27, 27, .08);
+
+    border-radius: var(--radio);
+
+    box-shadow: var(--sombra);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        border-color .3s ease;
+}
+
+
+/* Decoración superior */
+
+.lista-pizzas li::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 5px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--rojo) 0 33%,
+            white 33% 66%,
+            var(--verde) 66%
+        );
+}
+
+
+/* Decoración circular */
+
+.lista-pizzas li::after {
+    content: "";
+
+    position: absolute;
+
+    right: -35px;
+    top: -35px;
+
+    width: 100px;
+    height: 100px;
+
+    border-radius: 50%;
+
+    background: rgba(198, 40, 40, .05);
+
+    transition: transform .4s ease;
+}
+
+
+/* ---------------------------------------------------------
+   9. HOVER
+   --------------------------------------------------------- */
+
+.lista-pizzas li:hover {
+    transform: translateY(-8px);
+
+    border-color: rgba(198, 40, 40, .25);
+
+    box-shadow: var(--sombra-hover);
+}
+
+.lista-pizzas li:hover::after {
+    transform: scale(1.8);
+}
+
+
+/* ---------------------------------------------------------
+   10. NOMBRE DE LA PIZZA
+   --------------------------------------------------------- */
+
+.lista-pizzas h3 {
+    position: relative;
+    z-index: 2;
+
+    margin: 0 0 15px;
+
+    color: var(--rojo-oscuro);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 1.5rem;
+
+    line-height: 1.2;
+}
+
+
+/* ---------------------------------------------------------
+   11. INGREDIENTES
+   --------------------------------------------------------- */
+
+.ingredients {
+    margin: 0 0 15px;
+
+    color: var(--gris);
+
+    font-size: .95rem;
+}
+
+
+/* Añadimos un pequeño icono */
+
+.ingredients::before {
+    content: "✦ ";
+
+    color: var(--verde);
+}
+
+
+/* ---------------------------------------------------------
+   12. ALÉRGENOS
+   --------------------------------------------------------- */
+
+.alerg {
+    display: inline-block;
+
+    width: fit-content;
+
+    margin: auto 0 15px;
+
+    padding: 5px 10px;
+
+    background: #fff0d6;
+
+    border-radius: 50px;
+
+    color: #8a5a00;
+
+    font-size: .75rem;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: .5px;
+}
+
+
+/* ---------------------------------------------------------
+   13. PRECIO
+   --------------------------------------------------------- */
+
+.precio {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0;
+    padding-top: 15px;
+
+    border-top: 1px dashed rgba(0, 0, 0, .15);
+
+    color: var(--rojo-oscuro);
+
+    font-size: 1.15rem;
+
+    font-weight: 800;
+}
+
+
+/* ---------------------------------------------------------
+   14. FOOTER
+   --------------------------------------------------------- */
+
+footer {
+    padding: 35px 20px;
+
+    background: var(--rojo-oscuro);
+
+    color: white;
+
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 1rem;
+}
+
+
+/* ---------------------------------------------------------
+   15. RESPONSIVE - TABLET
+   --------------------------------------------------------- */
+
+@media (max-width: 768px) {
+
+    main {
+        width: min(100% - 30px, 600px);
+
+        margin-top: 40px;
+        margin-bottom: 50px;
+    }
+
+    main > h1 {
+        font-size: clamp(2.5rem, 12vw, 4rem);
+    }
+
+    main > p {
+        padding: 20px;
+
+        font-size: .95rem;
+    }
+
+    .lista-pizzas {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 18px;
+    }
+
+    .lista-pizzas li {
+        padding: 20px;
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   16. RESPONSIVE - MÓVIL
+   --------------------------------------------------------- */
+
+@media (max-width: 520px) {
+
+    main {
+        width: calc(100% - 24px);
+
+        margin-top: 30px;
+    }
+
+    main > h1 {
+        font-size: 2.7rem;
+
+        letter-spacing: -1px;
+    }
+
+    main > h2 {
+        font-size: 1.25rem;
+
+        padding: 0 10px;
+    }
+
+    main > p {
+        margin-bottom: 30px;
+
+        padding: 18px;
+
+        font-size: .9rem;
+
+        text-align: left;
+    }
+
+    .lista-pizzas {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .lista-pizzas li {
+        min-height: auto;
+
+        padding: 22px;
+    }
+
+    .lista-pizzas h3 {
+        font-size: 1.4rem;
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   17. REDUCE MOTION
+   --------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+
+        transition: none !important;
+    }
+
+}
+
+
+li span.copyright{ opacity:0.5; font-size: 10px; font-style: italic;}
