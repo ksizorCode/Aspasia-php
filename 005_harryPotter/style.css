@@ -1,0 +1,409 @@
+/* ========================================
+   RESET
+======================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #f4f1e8;
+    color: #222;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 5%;
+
+    background: #20182b;
+}
+
+
+/* Menú principal */
+
+header nav ul {
+    display: flex;
+
+    gap: 25px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+
+/* Enlaces del header */
+
+header a {
+    color: #e4c96a;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: color 0.2s ease;
+}
+
+header a:hover {
+    color: white;
+}
+
+
+/* ========================================
+   MAIN
+======================================== */
+
+main {
+    width: min(1200px, 90%);
+
+    margin: 0 auto;
+
+    padding: 50px 0;
+}
+
+
+/* ========================================
+   TÍTULOS
+======================================== */
+
+h1 {
+    margin: 0 0 20px;
+
+    text-align: center;
+
+    font-size: clamp(2rem, 5vw, 3.5rem);
+
+    color: #35254d;
+}
+
+
+/* ========================================
+   CATÁLOGO
+======================================== */
+
+main > ul {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(200px, 1fr)
+        );
+
+    gap: 25px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+
+/* Tarjeta */
+
+main > ul > li {
+    overflow: hidden;
+
+    background: white;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.12);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+main > ul > li:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ========================================
+   IMÁGENES DEL CATÁLOGO
+======================================== */
+
+main > ul img {
+    display: block;
+
+    width: 100%;
+    height: 280px;
+
+    object-fit: cover;
+}
+
+
+/* ========================================
+   TEXTO DE LAS TARJETAS
+======================================== */
+
+main > ul h2 {
+    margin: 18px 20px 5px;
+
+    color: #35254d;
+
+    font-size: 1.25rem;
+}
+
+main > ul p {
+    margin: 0 20px 20px;
+
+    color: #777;
+}
+
+
+/* ========================================
+   FICHA DEL PERSONAJE
+======================================== */
+
+/* Información */
+
+main > p {
+    margin: 8px 0;
+
+    text-align: center;
+
+    font-size: 1.15rem;
+
+    color: #555;
+}
+
+
+/* Casa */
+
+main > p:first-of-type {
+    font-weight: bold;
+
+    color: #35254d;
+}
+
+
+/* Imagen principal */
+
+main > img {
+    display: block;
+
+    width: min(420px, 100%);
+    height: auto;
+
+    margin: 30px auto 60px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ========================================
+   SIGUIENTE / ANTERIOR
+======================================== */
+
+main > div {
+    max-width: 800px;
+
+    margin: 0 auto;
+
+    padding-top: 30px;
+
+    border-top: 1px solid #d5d0c5;
+}
+
+
+/* Título */
+
+main > div h2 {
+    margin: 0 0 25px;
+
+    text-align: center;
+
+    color: #35254d;
+}
+
+
+/* Lista de personajes */
+
+main > div nav ul {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+
+/* Tarjeta anterior/siguiente */
+
+main > div nav li {
+    overflow: hidden;
+
+    background: white;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.12);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+main > div nav li:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+
+/* Enlace */
+
+main > div nav a {
+    display: block;
+
+    color: inherit;
+
+    text-decoration: none;
+}
+
+
+/* Imagen */
+
+main > div nav img {
+    display: block;
+
+    width: 100%;
+    height: 220px;
+
+    object-fit: cover;
+}
+
+
+/* Nombre */
+
+main > div nav h3 {
+    margin: 15px;
+
+    text-align: center;
+
+    color: #35254d;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+    padding: 25px;
+
+    background: #20182b;
+
+    color: #bbb;
+
+    text-align: center;
+
+    font-size: 0.9rem;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 600px) {
+
+    /* Header en vertical */
+
+    header {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    /* Contenido */
+
+    main {
+        width: 92%;
+
+        padding: 35px 0;
+    }
+
+
+    /* Catálogo */
+
+    main > ul {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 15px;
+    }
+
+
+    main > ul img {
+        height: 220px;
+    }
+
+
+    /* Navegación anterior/siguiente */
+
+    main > div nav ul {
+        grid-template-columns: 1fr;
+    }
+
+
+    main > div nav img {
+        height: 260px;
+    }
+}
+
+
+/* ========================================
+   MÓVILES PEQUEÑOS
+======================================== */
+
+@media (max-width: 400px) {
+
+    main > ul {
+        grid-template-columns: 1fr;
+    }
+
+
+    main > ul img {
+        height: 300px;
+    }
+}
