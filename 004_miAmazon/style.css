@@ -1,0 +1,33 @@
+body{
+    font-family: sans-serif;
+    max-width:980px;
+    margin:10px auto;
+}
+
+main{
+    display: flex;
+    gap:30px;
+    flex-wrap:wrap;
+    flex-direction: row-reverse;
+}
+
+img{
+    max-width:360px;
+}
+
+button{
+    background: #FFD700;
+    text-align:center;
+    min-width:300px;
+    padding:10px;
+    border-radius:30px;
+    border:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+button:hover{
+    background: #c3a502;
+    color:white;
+    letter-spacing:2px;
+}
